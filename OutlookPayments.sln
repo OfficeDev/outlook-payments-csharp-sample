@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookPayments", "OutlookPayments\OutlookPayments.csproj", "{6E11696E-2A48-42B0-AAF7-7201C5215222}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E11696E-2A48-42B0-AAF7-7201C5215222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E11696E-2A48-42B0-AAF7-7201C5215222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E11696E-2A48-42B0-AAF7-7201C5215222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E11696E-2A48-42B0-AAF7-7201C5215222}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAEAE653-3E37-4DD5-86F2-53167E7C19BC}
+	EndGlobalSection
+EndGlobal
