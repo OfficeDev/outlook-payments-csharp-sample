@@ -37,4 +37,18 @@ namespace OutlookPayments.Models
         public string Code { get; set; }
         public string Message { get; set; }
     }
+
+    public static class PaymentErrorCodes
+    {
+        public static string InvalidNumber = "invalid_number";
+        public static string InvalidExpiryMonth = "invalid_expiry_month";
+        public static string InvalidExpiryYear = "invalid_expiry_year";
+        public static string InvalidCvc = "invalid_cvc";
+        public static string IncorrectNumber = "incorrect_number";
+        public static string ExpiredCard = "expired_card";
+        public static string IncorrectCvc = "incorrect_cvc";
+        public static string IncorrectZip = "incorrect_zip";
+        public static string CardDeclined = "card_declined";
+        public static string ProcessingError = "processing_error";
+    }
 }

@@ -90,7 +90,24 @@ namespace OutlookPayments.Controllers
                 };
             }
 
-            throw new HttpResponseException(HttpStatusCode.BadRequest);
+            // Not one of the TEST mode cards, return invalid number error
+            return new PaymentCompleteResponse()
+            {
+                RequestId = payment.RequestId,
+                Details = "We were unable to charge your credit card.",
+                Result = PaymentResult.Fail,
+                Error = new PaymentCompleteError()
+                {
+                    Code = "card_error",
+                    Message = "Card cannot be processed.",
+                    Target = "stripeToken",
+                    InnerError = new PaymentCompleteError()
+                    {
+                        Code = PaymentErrorCodes.InvalidNumber,
+                        Message = "Sample expects test tokens only."
+                    }
+                }
+            };
         }
 
         private PaymentCompleteResponse CreateMockCardDeclinedResponse(string requestId, string invoiceId, PaymentCurrencyAmount amount)
@@ -100,22 +117,17 @@ namespace OutlookPayments.Controllers
                 RequestId = requestId,
                 Details = "We were unable to charge your credit card.",
                 Result = PaymentResult.Fail,
-                Entity = new Invoice()
+                Error = new PaymentCompleteError()
                 {
-                    Identifier = invoiceId,
-                    Url = "https://contoso.com/invoice",
-                    Broker = new LocalBusiness()
+                    Code = "card_error",
+                    Message = "Card cannot be processed.",
+                    Target = "stripeToken",
+                    InnerError = new PaymentCompleteError()
                     {
-                        Name = "Contoso"
-                    },
-                    PaymentDueDate = new DateTime(2019, 1, 31),
-                    PaymentStatus = PaymentStatus.PaymentDue,
-                    TotalPaymentDue = new PriceSpecification()
-                    {
-                        Price = Convert.ToDouble(amount.Value),
-                        PriceCurrency = amount.Currency
+                        Code = PaymentErrorCodes.CardDeclined,
+                        Message = "Your credit card was declined."
                     }
-                },
+                }
             };
         }
     }
