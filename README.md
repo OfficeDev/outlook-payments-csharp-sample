@@ -25,7 +25,7 @@ When you run the sample locally, it is accessible via `http://localhost:52663`. 
 Open a command prompt or shell and run the following command:
 
 ```Shell
-ngrok http 3333 -host-header=localhost:52663
+ngrok http 52663 -host-header=localhost:52663
 ```
 
 The output should look similar to this:
