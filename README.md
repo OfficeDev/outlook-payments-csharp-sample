@@ -10,7 +10,7 @@ You must also have Visual Studio 2017 installed.
 
 ## Configuring the sample
 
-1. Make a copy of the [OutlookPayments/MerchantInfo.EXAMPLE.config](OutlookPayments/MerchantInfo.EXAMPLE.config) file in the **OutlookPayments** directory, named `MerchantInfo.config`.
+1. Make a copy of the [OutlookPayments/MerchantInfo.EXAMPLE.config](OutlookPayments/MerchantInfo.EXAMPLE.config) file in the **OutlookPayments** directory. Rename this copy of the file to `MerchantInfo.config`.
 1. Open **OutlookPayments.sln** in Visual Studio.
 1. Open the **MerchantInfo.config** file and update the value of the `MerchantId` key with your merchant ID from the Payments in Outlook dashboard.
 
