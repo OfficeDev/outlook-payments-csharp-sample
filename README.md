@@ -1,14 +1,13 @@
 ---
 topic: sample
 products:
-- Outlook
 - Office 365
+- Outlook
 languages:
-- C#
-- ASP.NET
+- JavaScript
 extensions:
   contentType: samples
-  createdDate: 04/26/2018 2:40:56 PM
+  createdDate: 4/24/2018 7:42:25 AM
 ---
 # Sample ASP.NET Web API Payments in Outlook webhook
 
