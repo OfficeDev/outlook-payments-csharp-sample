@@ -1,14 +1,21 @@
 ---
 page_type: sample
 products:
+- aspnet
+- dotnet
+- office
 - office-365
 - office-outlook
 languages:
 - javascript
+- csharp
+description: "This is an example implementation of the payment request and payment complete webhooks for a Payments in Outlook service."
+urlFragment: outlook-payments
 extensions:
   contentType: samples
-  createdDate: 4/24/2018 7:42:25 AM
+  createdDate: "4/24/2018 7:42:25 AM"
 ---
+
 # Sample ASP.NET Web API Payments in Outlook webhook
 
 This is an example implementation of the payment request and payment complete webhooks for a [Payments in Outlook](https://docs.microsoft.com/outlook/payments/) service.
